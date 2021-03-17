@@ -7,5 +7,11 @@
 }
 
 #about_us {
-    background-color: rgb(121, 117, 117);
+    background-color: rgb(155, 151, 151);
+}
+
+p,
+h2,
+h3 {
+    text-align: right;
 }
