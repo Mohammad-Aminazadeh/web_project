@@ -95,10 +95,10 @@ function App() {
               alt="n/a"
               id="around_the_world_img"
             ></img>
-            <h1 className="display-4 fst-italic" style="text-align: right;">
+            <h1 className="display-4 fst-italic" style={{textAlign: "right"}}>
               با ما، به هرکجای دنیا که می‌خواهید سفر کنید
             </h1>
-            <p className="lead my-3" style="text-align: right;">
+            <p className="lead my-3" style={{textAlign: "right"}}>
               این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است
               که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک
               تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار
@@ -311,7 +311,32 @@ function Home() {
 }
 
 function Tehran() {
-  return <h1></h1>;
+  return (
+    <div className="Tehran">
+      <h1 style={{ textAlign: "center" }}>تهران</h1>
+      <img
+        src="https://wallpaperaccess.com/full/1291453.jpg"
+        alt="تهران"
+        width={500}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد تهران</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+        <p>
+          تهران کلان شهر دوست داشتنی ایران مراکز گردشگری زیادی برای تفریح و
+          سرگرمی دارد. بسیاری برای گردش عصرانه خود، یکی از پارک های جذاب و مفرح
+          این شهر را انتخاب می کنند و برخی در جستجوی سکوت و آرامش، به یکی از
+          رستوران ها و کافه های متعدد تهران می روند و ساعتی را با دوستان شان
+          خلوت می کنند. از همین رو ما در این مطلب از مجله ی گردشگری الی گشت قصد
+          داریم به چند مورد از بهترین مراکز گردشگری تهران اشاره داشته باشیم تا
+          زمانی که خواستید اوقات فراغتتان را در کنار دوستان و خانوادتان سپری
+          کنید با جاذبه های پایتخت ایران آشنایی بیشتری داشته باشید.
+        </p>
+      </article>
+    </div>
+  );
 }
 
 function Isfahan() {
