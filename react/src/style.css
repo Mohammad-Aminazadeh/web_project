@@ -1,0 +1,17 @@
+#around_the_world_img {
+    width: 423px;
+    height: 382px;
+    position: absolute;
+    top: 153px;
+    right: 184px;
+}
+
+#about_us {
+    background-color: rgb(155, 151, 151);
+}
+
+p,
+h2,
+h3 {
+    text-align: right;
+}
