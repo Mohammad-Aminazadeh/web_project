@@ -38,14 +38,9 @@
             $resault = $con->query($check_user_query);
 
             if ($resault->num_rows > 0) {
-                echo("این کاربر وجود دارد.");
-                header("location: login.php");
-            } else {
-                $add_user_query = "
-                    insert into users (username, password) values ('$username', '$password')
-                ";
-                $con->query($add_user_query);
                 header("location: index.html");
+            } else {
+                echo("Invalid Username or Password!");
             }
 
         }
