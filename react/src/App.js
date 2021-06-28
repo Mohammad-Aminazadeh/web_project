@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import 'style.css';
 
 function App() {
   return (
@@ -33,26 +34,30 @@ function Home() {
         </header>
 
         <div className="nav-scroller py-1 mb-2">
+          <Router>
             <nav className="nav d-flex justify-content-between">
-                <a className="p-2 link-secondary" href="#">تهران</a>
-                <a className="p-2 link-secondary" href="#">اصفهان</a>
-                <a className="p-2 link-secondary" href="#">شیراز</a>
-                <a className="p-2 link-secondary" href="#">مشهد</a>
-                <a className="p-2 link-secondary" href="#">تبریز</a>
-                <a className="p-2 link-secondary" href="#">یزد</a>
-                <a className="p-2 link-secondary" href="#">اردبیل</a>
-                <a className="p-2 link-secondary" href="#">گیلان</a>
-                <a className="p-2 link-secondary" href="#">مازندران</a>
-                <a className="p-2 link-secondary" href="#">بندرعباس</a>
-                <a className="p-2 link-secondary" href="#">کرمان</a>
-                <a className="p-2 link-secondary" href="#">سمنان</a>
+                <Link to="/tehran" className="p-2 link-secondary">تهران</Link>
+                <Link to="/isfahan" className="p-2 link-secondary">اصفهان</Link>
+                <Link to="/shiraz" className="p-2 link-secondary">شیراز</Link>
+                <Link to="/mashhad" className="p-2 link-secondary">مشهد</Link>
+                <Link to="/tabriz" className="p-2 link-secondary">تبریز</Link>
+                <Link to="/yazd" className="p-2 link-secondary">یزد</Link>
+                <Link to="/ardebil" className="p-2 link-secondary">اردبیل</Link>
+                <Link to="/gilan" className="p-2 link-secondary">گیلان</Link>
+                <Link to="/mazandaran" className="p-2 link-secondary">مازندران</Link>
+                <Link to="/bandarabbas" className="p-2 link-secondary">بندرعباس</Link>
+                <Link to="/kerman" className="p-2 link-secondary">کرمان</Link>
+                <Link to="/semnan" className="p-2 link-secondary">سمنان</Link>
             </nav>
+          </Router>
+            
         </div>
-    </div>
+      </div>
 
-    <main className="container">
+      <main className="container">
         <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div className="col-md-6 px-0">
+              {/* correct styles to match jsx style using {} */}
                 <img src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg" alt="n/a" id="around_the_world_img"></img>
                 <h1 className="display-4 fst-italic" style="text-align: right;">با ما، به هرکجای دنیا که می‌خواهید سفر کنید</h1>
                 <p className="lead my-3" style="text-align: right;">این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار شده است </p>
@@ -132,16 +137,20 @@ function Home() {
                 </article>
             </div>
         </div>
-    </main>
-
-    <footer className="blog-footer">
-        <div className="row-md-6" id="about_us">
-            <h3>درباره‌ی ما</h3>
-            <p>این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده </p>
-        </div>
-
-    </footer>
+      </main>
+      <footer className="blog-footer">
+          <div className="row-md-6" id="about_us">
+              <h3>درباره‌ی ما</h3>
+              <p>این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که تکرار شده </p>
+          </div>
+      </footer>
     </div>
+  );
+}
+
+function Tehran() {
+  return (
+    <h1></h1>
   );
 }
 
