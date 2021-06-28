@@ -82,51 +82,27 @@ function App() {
               <Link to="/semnan" className="p-2 link-secondary">
                 سمنان
               </Link>
+
+              <Switch>
+                <Route path="/home" component={Home}></Route>
+                <Route path="/tehran" component={Tehran}></Route>
+                <Route path="/isfahan" component={Isfahan}></Route>
+                <Route path="/shiraz" component={Shiraz}></Route>
+                <Route path="/mashhad" component={Mashhad}></Route>
+                <Route path="/tabriz" component={Tabriz}></Route>
+                <Route path="/yazd" component={Yazd}></Route>
+                <Route path="/ardebil" component={Ardebil}></Route>
+                <Route path="/gilan" component={Gilan}></Route>
+                <Route path="/mazandaran" component={Mazandaran}></Route>
+                <Route path="/bandarabbas" component={Bandarabbas}></Route>
+                <Route path="/kerman" component={Kerman}></Route>
+                <Route path="/semnan" component={Semnan}></Route>
+              </Switch>
             </nav>
           </Router>
         </div>
       </div>
 
-      <main className="container">
-        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-          <div className="col-md-6 px-0">
-            <img
-              src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
-              alt="n/a"
-              id="around_the_world_img"
-            ></img>
-            <h1 className="display-4 fst-italic" style={{textAlign: "right"}}>
-              با ما، به هرکجای دنیا که می‌خواهید سفر کنید
-            </h1>
-            <p className="lead my-3" style={{textAlign: "right"}}>
-              این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است
-              که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک
-              تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار
-              شده است{" "}
-            </p>
-            <p className="lead mb-0">
-              <a href="Continue reading.html" className="text-white fw-bold">
-                ...در ادامه بخوانید
-              </a>
-            </p>
-          </div>
-        </div>
-      </main>
-      <Switch>
-        <Route path="/home" component={Home}></Route>
-        <Route path="/tehran" component={Tehran}></Route>
-        <Route path="/isfahan" component={Isfahan}></Route>
-        <Route path="/shiraz" component={Shiraz}></Route>
-        <Route path="/mashhad" component={Mashhad}></Route>
-        <Route path="/tabriz" component={Tabriz}></Route>
-        <Route path="/yazd" component={Yazd}></Route>
-        <Route path="/ardebil" component={Ardebil}></Route>
-        <Route path="/gilan" component={Gilan}></Route>
-        <Route path="/mazandaran" component={Mazandaran}></Route>
-        <Route path="/bandarabbas" component={Bandarabbas}></Route>
-        <Route path="/kerman" component={Kerman}></Route>
-        <Route path="/semnan" component={Semnan}></Route>
-      </Switch>
       <footer className="blog-footer">
         <div className="row-md-6" id="about_us">
           <h3>درباره‌ی ما</h3>
@@ -144,6 +120,32 @@ function App() {
 function Home() {
   return (
     <div className="Home">
+      <main className="container">
+        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+          <div className="col-md-6 px-0">
+            <img
+              src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
+              alt="n/a"
+              id="around_the_world_img"
+            ></img>
+            <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
+              با ما، به هرکجای دنیا که می‌خواهید سفر کنید
+            </h1>
+            <p className="lead my-3" style={{ textAlign: "right" }}>
+              این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است
+              که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک
+              تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار
+              شده است{" "}
+            </p>
+            <p className="lead mb-0">
+              <a href="Continue reading.html" className="text-white fw-bold">
+                ...در ادامه بخوانید
+              </a>
+            </p>
+          </div>
+        </div>
+      </main>
+
       <div className="row">
         <div className="col-md-12">
           <article className="blog-post">
@@ -236,6 +238,32 @@ function Home() {
 function Tehran() {
   return (
     <div className="Tehran">
+      <main className="container">
+        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+          <div className="col-md-6 px-0">
+            <img
+              src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
+              alt="n/a"
+              id="around_the_world_img"
+            ></img>
+            <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
+              با ما، به هرکجای دنیا که می‌خواهید سفر کنید
+            </h1>
+            <p className="lead my-3" style={{ textAlign: "right" }}>
+              این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است
+              که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک
+              تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار
+              شده است{" "}
+            </p>
+            <p className="lead mb-0">
+              <a href="Continue reading.html" className="text-white fw-bold">
+                ...در ادامه بخوانید
+              </a>
+            </p>
+          </div>
+        </div>
+      </main>
+
       <h1 style={{ textAlign: "center" }}>تهران</h1>
       <img
         src="https://wallpaperaccess.com/full/1291453.jpg"
