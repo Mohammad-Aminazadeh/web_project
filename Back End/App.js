@@ -8,7 +8,16 @@ class App extends React.Component {
     this.state = {
       tehran_data: '',
       isfahan_data: '',
-
+      shiraz_data: '',
+      mashhad_data: '',
+      tabriz_data: '',
+      yazd_data: '',
+      ardebil_data: '',
+      gilan_data: '',
+      mazandaran_data: '',
+      bandarabbas_data: '',
+      kerman_data: '',
+      semnan_data:''
     }
   }
 
