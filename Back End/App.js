@@ -83,10 +83,57 @@ function App() {
                 سمنان
               </Link>
             </nav>
+            
+            <Switch>
+              <Route path="/home" component={Home}></Route>
+              <Route path="/tehran" component={Tehran}></Route>
+              <Route path="/isfahan" component={Isfahan}></Route>
+              <Route path="/shiraz" component={Shiraz}></Route>
+              <Route path="/mashhad" component={Mashhad}></Route>
+              <Route path="/tabriz" component={Tabriz}></Route>
+              <Route path="/yazd" component={Yazd}></Route>
+              <Route path="/ardebil" component={Ardebil}></Route>
+              <Route path="/gilan" component={Gilan}></Route>
+              <Route path="/mazandaran" component={Mazandaran}></Route>
+              <Route path="/bandarabbas" component={Bandarabbas}></Route>
+              <Route path="/kerman" component={Kerman}></Route>
+              <Route path="/semnan" component={Semnan}></Route>
+            </Switch>
           </Router>
         </div>
       </div>
 
+      <footer className="blog-footer">
+        <div className="row-md-6" id="about_us">
+          <h3>درباره‌ی ما</h3>
+          <p>
+            سایت گردشگری تریپ یار با داشتن هدف دگرگونی و متحول ساختن گردشگری
+            ایران در فضای آنلاین گردشگری خواستار ایجاد رقابت سالم در میان سایت
+            های رزرواسیون هتل و سایت های معرفی جاذبه های گردشگری ایران می باشد
+            تا در آینده نچندان دور گردشگری ایران را متحول ببینیم. سایت گردشگری
+            تریپ یار با دارا بودن امکانات ویژه که برای اولین بار در یک سایت
+            گردشگری در ایران از این امکانات رونمایی شده پا در دنیای گردشگری
+            گذاشته است که برای نمونه می توان به اولین و بزرگترین سیستم آنلاین
+            مقایسه قیمت و رزر هتل و هتل آپارتمان ها٬ میانگین امتیاز دهی هتل ها
+            از سایت های رزرواسیون هتل٬ معرفی جاذبه های گردشگری به بهترین نوع با
+            زمان و نرخ بازدیدهای اماکن گردشگری برای اولین بار در ایران٬ به
+            روزترین اخبار گردشگری ایران از سایت های گردشگری٬ تقویم و برنامه ریزی
+            گردشگری به بهترین٬ راحت ترین و سریع ترین نوع که از ویژگی های بارز و
+            مهم سایت گردشگری تریپ یار می باشد٬ که برای اولین بار در یک سایت
+            گردشگری در ایران و شاید حتی در دنیا از آن پرده برداری شدو ده ها
+            ویژگی ها منحصر بفردی که در آینده برای راحت تر٬ بی دغدغه و ارزان تر
+            سفر کردن شاهد آن خواهید بود. ما برای تغییر و دگرگونی گردشگری ایران
+            آمدیم. تریپ یار٬ یار سفر
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <div className="Home">
       <main className="container">
         <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
           <div className="col-md-6 px-0">
@@ -112,38 +159,7 @@ function App() {
           </div>
         </div>
       </main>
-      <Switch>
-        <Route path="/home" component={Home}></Route>
-        <Route path="/tehran" component={Tehran}></Route>
-        <Route path="/isfahan" component={Isfahan}></Route>
-        <Route path="/shiraz" component={Shiraz}></Route>
-        <Route path="/mashhad" component={Mashhad}></Route>
-        <Route path="/tabriz" component={Tabriz}></Route>
-        <Route path="/yazd" component={Yazd}></Route>
-        <Route path="/ardebil" component={Ardebil}></Route>
-        <Route path="/gilan" component={Gilan}></Route>
-        <Route path="/mazandaran" component={Mazandaran}></Route>
-        <Route path="/bandarabbas" component={Bandarabbas}></Route>
-        <Route path="/kerman" component={Kerman}></Route>
-        <Route path="/semnan" component={Semnan}></Route>
-      </Switch>
-      <footer className="blog-footer">
-        <div className="row-md-6" id="about_us">
-          <h3>درباره‌ی ما</h3>
-          <p>
-            این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که
-            تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی
-            است که تکرار شده این یک تکست بی معنی است که تکرار شده{" "}
-          </p>
-        </div>
-      </footer>
-    </div>
-  );
-}
 
-function Home() {
-  return (
-    <div className="Home">
       <div className="row">
         <div className="col-md-12">
           <article className="blog-post">
@@ -246,29 +262,41 @@ function Home() {
           </article>
 
           <article className="blog-post">
-            <h2 className="blog-post-title">موضوع بی معنی</h2>
+            <h2 className="blog-post-title">مناطق تاریخی و فرهنگی ایران</h2>
             <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
             <p>
-              این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که
-              تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی
-              است که تکرار شده .
+              استان فارس از قطب های بزرگ گردشگری فرهنگی و تاریخی ایران به شمار
+              می آید و دارای عنوان پایتخت فرهنگی ایران باستان شناخته شده است. در
+              این استان بناهای مختلف و آثار تاریخی قبل از تاریخ را می توان دید.
+              در این استان می توان سنگ نگاره های غارنشینان ده مورد را نام برد.
+              بناهای باستانی ابن استان عبارتند از پاسارگاد، تخت جمشید، تخت
+              سلیمان، نقش رستم، حمام و بازار وکیل، دروازه قرآن و آرامگاه سعدی و
+              حافظ. گردشگران زیادی سالانه برای بازدید از این مکان های تاریخی به
+              استان فارس سفر می کنند. شیراز یکی از شهر های بزرگ و قدیمی ایران
+              است. شیراز با عطر بهار نارنج یکی از بزرگترین جاذبه های گردشگری
+              ایران است.
             </p>
             <blockquote>
               <p>
-                این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که
-                تکرار شده{" "}
+                از دیگر مناطق تاریخی و فرهنگی ایران شهر اصفهان می باشد. اصفهان
+                با وجود میدان نقش جهان، سی و سه پل، پل خواجو، عمارت عالی قاپو،
+                کاخ چهل ستون و هنرهای مختلفی چون مینیاتور، کاشی کاری و حجاری به
+                عنوان پایتخت فرهنگی اسلامی ایران معرفی شده است.
               </p>
             </blockquote>
             <p>
-              این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که
-              تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی
-              است که تکرار شده این یک تکست بی معنی است که تکرار شده این یک تکست
-              بی معنی است که تکرار شده
+              از دیگر قطب های گردشگری فرهنگی تاریخی ایران می توان استان کرمانشاه
+              را نام برد. مکان های دیدنی این استان طاق بستان، معبد آناهیتا،
+              کاروانسرای عباسی، تکیه معاون الملک، بزرگترین بازار سنتی خاورمیانه،
+              مسجد شافعی، مسجد و حمام حاج شهبازخان هستند.
             </p>
             <p>
-              این یک تکست بی معنی است که تکرار شده این یک تکست بی معنی است که
-              تکرار شده{" "}
+              در فصل تابستان مسافران زیادی از اردبیل، مشگین شهر، دامنه های سبلان
+              و سهند و منطقه دماوند در البرز دیدن می کنند.در فصل گرما بهترین
+              انتخاب سفر به استان اردبیل است. شمشک، توچال، پیست اسکی دیزین و
+              آبعلی که در ارتفاعات البرز هستند، بهترین مناطق برای ورزش های
+              زمستانی در ایران هستند. ‌
             </p>
           </article>
         </div>
