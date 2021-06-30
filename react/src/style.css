@@ -1,7 +1,7 @@
 #around_the_world_img {
     width: 423px;
     height: 382px;
-    position: absolute;
+    position: static;
     top: 153px;
     right: 184px;
 }

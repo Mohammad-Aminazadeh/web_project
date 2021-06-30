@@ -1,7 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "style.css";
+import "./style.css";
 
+// const image_style = {
+//   align: {
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   }
+// };
 function App() {
   return (
     <div className="App">
@@ -109,6 +115,7 @@ function App() {
               src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
               alt="n/a"
               id="around_the_world_img"
+              style={{alignContent:"center"}}
             ></img>
             <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
               با ما، به هرکجای دنیا که می‌خواهید سفر کنید
@@ -480,7 +487,8 @@ function Ardebil() {
         alt="اردبیل"
         width={500}
         height={600}
-        style={{ textAlign: "center" }}
+        style={{ justifyContent: "center" }}
+        textAlign="center"
       ></img>
       <article className="blog-post">
         <h2 className="blog-post-title">درمورد اردبیل</h2>
