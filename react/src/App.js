@@ -83,6 +83,21 @@ function App() {
                 سمنان
               </Link>
             </nav>
+            <Switch>
+              <Route path="/home" component={Home}></Route>
+              <Route path="/tehran" component={Tehran}></Route>
+              <Route path="/isfahan" component={Isfahan}></Route>
+              <Route path="/shiraz" component={Shiraz}></Route>
+              <Route path="/mashhad" component={Mashhad}></Route>
+              <Route path="/tabriz" component={Tabriz}></Route>
+              <Route path="/yazd" component={Yazd}></Route>
+              <Route path="/ardebil" component={Ardebil}></Route>
+              <Route path="/gilan" component={Gilan}></Route>
+              <Route path="/mazandaran" component={Mazandaran}></Route>
+              <Route path="/bandarabbas" component={Bandarabbas}></Route>
+              <Route path="/kerman" component={Kerman}></Route>
+              <Route path="/semnan" component={Semnan}></Route>
+            </Switch>
           </Router>
         </div>
       </div>
@@ -112,21 +127,7 @@ function App() {
           </div>
         </div>
       </main>
-      <Switch>
-        <Route path="/home" component={Home}></Route>
-        <Route path="/tehran" component={Tehran}></Route>
-        <Route path="/isfahan" component={Isfahan}></Route>
-        <Route path="/shiraz" component={Shiraz}></Route>
-        <Route path="/mashhad" component={Mashhad}></Route>
-        <Route path="/tabriz" component={Tabriz}></Route>
-        <Route path="/yazd" component={Yazd}></Route>
-        <Route path="/ardebil" component={Ardebil}></Route>
-        <Route path="/gilan" component={Gilan}></Route>
-        <Route path="/mazandaran" component={Mazandaran}></Route>
-        <Route path="/bandarabbas" component={Bandarabbas}></Route>
-        <Route path="/kerman" component={Kerman}></Route>
-        <Route path="/semnan" component={Semnan}></Route>
-      </Switch>
+
       <footer className="blog-footer">
         <div className="row-md-6" id="about_us">
           <h3>درباره‌ی ما</h3>

@@ -21,6 +21,10 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    fetch('')
+  }
+
   render() {
     return (
       <div className="App">
