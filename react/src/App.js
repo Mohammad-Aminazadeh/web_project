@@ -123,11 +123,6 @@ function App() {
             <p className="lead my-3" style={{ textAlign: "right" }}>
              اطلاعات مفید برای گردشگری در ایران را از طریق ما بدست آورید و در سفرتان از ما استفاده کنید. {" "}
             </p>
-            <p className="lead mb-0">
-              <a href="Continue reading.html" className="text-white fw-bold">
-                ...در ادامه بخوانید
-              </a>
-            </p>
           </div>
         </div>
       </main>
