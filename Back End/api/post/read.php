@@ -43,7 +43,7 @@
     } else {
         // no posts
         echo json_encode(
-            array('message' => 'no posts!');
+            array('message' => 'no posts!')
         );
     }
 
