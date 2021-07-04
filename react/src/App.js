@@ -115,7 +115,7 @@ function App() {
               src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
               alt="n/a"
               id="around_the_world_img"
-              style={{alignContent:"center"}}
+              style={{ alignContent: "center" }}
             ></img>
             <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
               با ما، به هرکجای دنیا که می‌خواهید سفر کنید
