@@ -4,8 +4,8 @@
     header('Content-Type: application/json');
 
     // includes
-    include_once '../../config/Database.php/';
-    include_once '../../models/Post.php';
+    include_once 'C:\xampp\htdocs\Back_End\config\Database.php';
+    include_once 'C:\xampp\htdocs\Back_End\models\Post.php';
 
     // initialize DB and connect
     $database = new Database();
