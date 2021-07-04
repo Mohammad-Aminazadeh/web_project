@@ -2,7 +2,7 @@
     class Database {
         // DB params
         private $host = 'localhost';
-        private $db_name = '';
+        private $db_name = 'travel_agency';
         private $username = 'root';
         private $password = '';
         private $conn;
