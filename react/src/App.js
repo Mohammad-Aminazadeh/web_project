@@ -112,16 +112,16 @@ function App() {
         <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
           <div className="col-md-6 px-0">
             <img
-              src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
+              src="https://iranstourism.com/wp-content/uploads/2019/06/Iran-tourism-1-870x438.png"
               alt="n/a"
               id="around_the_world_img"
               style={{ alignContent: "center" }}
             ></img>
             <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
-              با ما، به هرکجای دنیا که می‌خواهید سفر کنید
+              با ما، به هرکجای ایران که می‌خواهید سفر کنید
             </h1>
             <p className="lead my-3" style={{ textAlign: "right" }}>
-             اطلاعات مفید برای گردشگری در ایران را از طریق ما بدست آورید و در سفرتان از ما استفاده کنید. {" "}
+             اطلاعات مفید برای گردشگری در ایران را از طریق ما بدست آورید و در سفرتان از ما استفاده کنید {" "}
             </p>
           </div>
         </div>
