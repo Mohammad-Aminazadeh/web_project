@@ -172,7 +172,7 @@ function Tehran() {
       <img
         src="https://wallpaperaccess.com/full/1291453.jpg"
         alt="تهران"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -206,7 +206,7 @@ function Isfahan() {
       <img
         src="https://images.kojaro.com/2020/8/29c87dc1-bc25-4a8a-8c94-8529e7e26dcb.jpg"
         alt="اصفهان"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -244,7 +244,7 @@ function Shiraz() {
       <img
         src="https://aminmana.com/wp-content/uploads/2019/04/shiraz.jpg"
         alt="شیراز"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -282,7 +282,7 @@ function Mashhad() {
       <img
         src="http://mashadmag.ir/wp-content/uploads/2019/01/Mashad-1.jpg"
         alt="مشهد"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -325,7 +325,7 @@ function Tabriz() {
       <img
         src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1394/06/03/13940603114647695955824.jpg"
         alt="تبریز"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -369,7 +369,7 @@ function Yazd() {
       <img
         src="https://www.bultannews.com/files/fa/news_albums/654356/8251/resized/resized_1236704_194.jpg"
         alt="یزد"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -409,7 +409,7 @@ function Ardebil() {
       <img
         src="https://safarmarket.com/blog/data/uploaded_files/d762334fbcc5c0a8b561b504.jpg"
         alt="اردبیل"
-        width={500}
+        width={1100}
         height={600}
         style={{ justifyContent: "center" }}
         textAlign="center"
@@ -449,7 +449,7 @@ function Gilan() {
       <img
         src="https://shahrak-arash.com/wp-content/uploads/2021/01/gilan-11.jpg"
         alt="گیلان"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -491,7 +491,7 @@ function Mazandaran() {
       <img
         src="https://www.finds.ir/img/2020042876011819.jpg"
         alt="مازندران"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -526,7 +526,7 @@ function Bandarabbas() {
       <img
         src="https://media.mehrnews.com/d/2017/12/24/3/2672251.jpg"
         alt="بندرعباس"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -566,7 +566,7 @@ function Kerman() {
       <img
         src="https://cdn.mehrbooking.net/general/Images/Cities/kerman-ganjalikhan-mosque.jpg"
         alt="کرمان"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
@@ -605,7 +605,7 @@ function Semnan() {
       <img
         src="https://www.alaedin.travel/Files/cities/semnan/Alaedin-Travel-Semnan-City-1.jpg"
         alt="سمنان"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
