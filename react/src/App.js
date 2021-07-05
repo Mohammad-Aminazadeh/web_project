@@ -53,10 +53,11 @@ class App extends React.Component {
 
           <div className="nav-scroller py-1 mb-2">
             <Router>
-              <Link to='/register' className=''>
+              <Link to="/register" className="">
                 <button
-                  className="btn btn-sm btn-outline-secondary "
+                  className="btn btn-outline-secondary "
                   // onClick={this.register_handler}
+                  style={{ display: "flex", justifyContent: "right" }}
                 >
                   ثبت نام
                 </button>
@@ -161,20 +162,41 @@ class App extends React.Component {
   }
 }
 
-function Register() {
-  return (
-    <form className='float-right'>
-      <label className='btn btn-primary d-flex justify-content-end align-items-center'>ایمیل خود را وارد کنید</label><br></br>
-      <input type='text' name='email'></input>
-      <br></br>
-      <br></br>
-      <label className='btn btn-secondary d-flex justify-content-end align-items-center'>پسورد خود را وارد کنید</label><br></br>
-      <input type='password' name='email'></input>
-      <br></br>
-      <br></br>
-      <input type='submit' className='btn btn-success'></input>
-    </form>
-  );
+class Register extends React.Component {
+
+  register_submit_handler = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    fetch('/api/post/get_user', {
+      method: 'POST',
+      body: data
+    });
+  }
+
+  render() {
+    return (
+      <form className="float-right" onSubmit={this.register_submit_handler}>
+        <label className="btn btn-primary d-flex justify-content-end align-items-center">
+          ایمیل خود را وارد کنید
+        </label>
+        <br></br>
+        <input type="text" name="email" style={{ textAlign: "right" }}></input>
+        <br></br>
+        <br></br>
+        <label className="btn btn-secondary d-flex justify-content-end align-items-center">
+          پسورد خود را وارد کنید
+        </label>
+        <br></br>
+        <input type="password" name="email"></input>
+        <br></br>
+        <br></br>
+        <input type="submit" className="btn btn-success"></input>
+      </form>
+    );
+
+
+  }
 }
 
 function About() {
