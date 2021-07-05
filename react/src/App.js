@@ -110,7 +110,7 @@ function App() {
 
       <main className="container">
         <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-          <div className="col-md-6 px-0">
+          <div className="col-md-12 px-0">
             <img
               src="https://iranstourism.com/wp-content/uploads/2019/06/Iran-tourism-1-870x438.png"
               alt="n/a"
@@ -336,6 +336,7 @@ function Tabriz() {
       ></img>
       <article className="blog-post">
         <h2 className="blog-post-title">درمورد تبریز</h2>
+
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
         <p>
           تبریز کلانشهری در منطقهٔ آذربایجان ایران و مرکز استان آذربایجان شرقی
