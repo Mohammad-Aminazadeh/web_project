@@ -105,7 +105,7 @@ class App extends React.Component {
                   سمنان
                 </Link>
               </nav>
-              
+
               <Switch>
                 <Route path="/register" component={Register}></Route>
                 <Route path="/about" component={About}></Route>
@@ -235,7 +235,7 @@ function About() {
 function Tehran() {
   return (
     <div className="Tehran">
-      <h1 style={{ textAlign: "center" }}>تهران</h1>
+      <h1 style={{ textAlign: "center"}} className='btn-dark'>تهران</h1>
       <img
         src="https://wallpaperaccess.com/full/1291453.jpg"
         alt="تهران"
@@ -269,7 +269,7 @@ function Tehran() {
 function Isfahan() {
   return (
     <div className="Isfahan">
-      <h1 style={{ textAlign: "center" }}>اصفهان</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>اصفهان</h1>
       <img
         src="https://images.kojaro.com/2020/8/29c87dc1-bc25-4a8a-8c94-8529e7e26dcb.jpg"
         alt="اصفهان"
@@ -307,7 +307,7 @@ function Isfahan() {
 function Shiraz() {
   return (
     <div className="Shiraz">
-      <h1 style={{ textAlign: "center" }}>شیراز</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>شیراز</h1>
       <img
         src="https://aminmana.com/wp-content/uploads/2019/04/shiraz.jpg"
         alt="شیراز"
@@ -345,7 +345,7 @@ function Shiraz() {
 function Mashhad() {
   return (
     <div className="Mashhad">
-      <h1 style={{ textAlign: "center" }}>مشهد</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>مشهد</h1>
       <img
         src="http://mashadmag.ir/wp-content/uploads/2019/01/Mashad-1.jpg"
         alt="مشهد"
@@ -388,9 +388,9 @@ function Mashhad() {
 function Tabriz() {
   return (
     <div className="Tabriz">
-      <h1 style={{ textAlign: "center" }}>تبریز</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>تبریز</h1>
       <img
-        src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1394/06/03/13940603114647695955824.jpg"
+        src="https://tabriz.io/wp-content/uploads/2016/05/%D8%B9%D9%85%D8%A7%D8%B1%D8%AA-%D8%B4%D9%87%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2.jpg"
         alt="تبریز"
         width={1100}
         height={600}
@@ -433,7 +433,7 @@ function Tabriz() {
 function Yazd() {
   return (
     <div className="Yazd">
-      <h1 style={{ textAlign: "center" }}>یزد</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>یزد</h1>
       <img
         src="https://www.bultannews.com/files/fa/news_albums/654356/8251/resized/resized_1236704_194.jpg"
         alt="یزد"
@@ -473,7 +473,7 @@ function Yazd() {
 function Ardebil() {
   return (
     <div className="Ardebil">
-      <h1 style={{ textAlign: "center" }}>اردبیل</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>اردبیل</h1>
       <img
         src="https://safarmarket.com/blog/data/uploaded_files/d762334fbcc5c0a8b561b504.jpg"
         alt="اردبیل"
@@ -513,7 +513,7 @@ function Ardebil() {
 function Gilan() {
   return (
     <div className="Gilan">
-      <h1 style={{ textAlign: "center" }}>گیلان</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>گیلان</h1>
       <img
         src="https://shahrak-arash.com/wp-content/uploads/2021/01/gilan-11.jpg"
         alt="گیلان"
@@ -555,9 +555,9 @@ function Gilan() {
 function Mazandaran() {
   return (
     <div className="Mazandaran">
-      <h1 style={{ textAlign: "center" }}>مازندران</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>مازندران</h1>
       <img
-        src="https://www.finds.ir/img/2020042876011819.jpg"
+        src="https://media.mehrnews.com/d/2021/01/11/3/3658044.jpg"
         alt="مازندران"
         width={1100}
         height={600}
@@ -590,7 +590,7 @@ function Mazandaran() {
 function Bandarabbas() {
   return (
     <div className="Bandarabbas">
-      <h1 style={{ textAlign: "center" }}>بندرعباس</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>بندرعباس</h1>
       <img
         src="https://media.mehrnews.com/d/2017/12/24/3/2672251.jpg"
         alt="بندرعباس"
@@ -630,9 +630,9 @@ function Bandarabbas() {
 function Kerman() {
   return (
     <div className="Kerman">
-      <h1 style={{ textAlign: "center" }}>کرمان</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>کرمان</h1>
       <img
-        src="https://cdn.mehrbooking.net/general/Images/Cities/kerman-ganjalikhan-mosque.jpg"
+        src="https://images.kojaro.com/2016/3/675c2640-1396-425b-9709-b4fff5a675a9.jpg"
         alt="کرمان"
         width={1100}
         height={600}
@@ -669,9 +669,9 @@ function Kerman() {
 function Semnan() {
   return (
     <div className="Semnan">
-      <h1 style={{ textAlign: "center" }}>سمنان</h1>
+      <h1 style={{ textAlign: "center" }} className='btn-dark'>سمنان</h1>
       <img
-        src="https://www.alaedin.travel/Files/cities/semnan/Alaedin-Travel-Semnan-City-1.jpg"
+        src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Arg-semnan.jpg"
         alt="سمنان"
         width={1100}
         height={600}
