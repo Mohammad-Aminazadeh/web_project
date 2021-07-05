@@ -237,7 +237,6 @@ function About() {
 function Tehran() {
   return (
     <div className="Tehran">
-      
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.tehran_data["city_name"]}
@@ -256,7 +255,7 @@ function Tehran() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.tehran_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -265,7 +264,6 @@ function Tehran() {
 function Isfahan() {
   return (
     <div className="Isfahan">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.isfahan_data["city_name"]}
@@ -284,7 +282,7 @@ function Isfahan() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.isfahan_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -293,7 +291,6 @@ function Isfahan() {
 function Shiraz() {
   return (
     <div className="Shiraz">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.shiraz_data["city_name"]}
@@ -312,7 +309,7 @@ function Shiraz() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.shiraz_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -320,7 +317,6 @@ function Shiraz() {
 function Mashhad() {
   return (
     <div className="Mashhad">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.mashhad_data["city_name"]}
@@ -339,7 +335,7 @@ function Mashhad() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.mazandaran_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -348,7 +344,6 @@ function Mashhad() {
 function Tabriz() {
   return (
     <div className="Tabriz">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.tabriz_data["city_name"]}
@@ -367,7 +362,7 @@ function Tabriz() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.tabriz_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -376,7 +371,6 @@ function Tabriz() {
 function Yazd() {
   return (
     <div className="Yazd">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.yazd_data["city_name"]}
@@ -395,7 +389,7 @@ function Yazd() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.yazd_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -404,7 +398,6 @@ function Yazd() {
 function Ardebil() {
   return (
     <div className="Ardebil">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.ardebil_data["city_name"]}
@@ -424,7 +417,7 @@ function Ardebil() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.ardebil_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -433,7 +426,6 @@ function Ardebil() {
 function Gilan() {
   return (
     <div className="Gilan">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.gilan_data["city_name"]}
@@ -452,7 +444,7 @@ function Gilan() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.gilan_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -461,7 +453,6 @@ function Gilan() {
 function Mazandaran() {
   return (
     <div className="Mazandaran">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.mazandaran_data["city_name"]}
@@ -480,7 +471,7 @@ function Mazandaran() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.mazandaran_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -489,7 +480,6 @@ function Mazandaran() {
 function Bandarabbas() {
   return (
     <div className="Bandarabbas">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.bandarabbas_data["city_name"]}
@@ -508,7 +498,7 @@ function Bandarabbas() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.bandarabbas_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -517,7 +507,6 @@ function Bandarabbas() {
 function Kerman() {
   return (
     <div className="Kerman">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.kerman_data["city_name"]}
@@ -536,7 +525,7 @@ function Kerman() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.kerman_data["city_description"]}</p>
       </article>
     </div>
   );
@@ -545,7 +534,6 @@ function Kerman() {
 function Semnan() {
   return (
     <div className="Semnan">
-
       {/* getiing city name and city description from state */}
       <h1 style={{ textAlign: "center" }}>
         {this.state.semnan_data["city_name"]}
@@ -564,7 +552,7 @@ function Semnan() {
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
-        <p></p>
+        <p>{this.state.semnan_data["city_description"]}</p>
       </article>
     </div>
   );
