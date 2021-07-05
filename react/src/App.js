@@ -51,6 +51,7 @@ class App extends React.Component {
 
           {this.state.register_form}
 
+          {/* page navigation bar */}
           <div className="nav-scroller py-1 mb-2">
             <Router>
               <Link to="/register" className="">
@@ -104,6 +105,7 @@ class App extends React.Component {
                   سمنان
                 </Link>
               </nav>
+              
               <Switch>
                 <Route path="/register" component={Register}></Route>
                 <Route path="/about" component={About}></Route>
@@ -124,6 +126,7 @@ class App extends React.Component {
           </div>
         </div>
 
+        {/* fixed content on each route */}
         <main className="container">
           <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div className="col-md-12 px-0">
@@ -147,6 +150,7 @@ class App extends React.Component {
           </div>
         </main>
 
+        {/* web page footer */}
         <footer className="blog-footer">
           <div className="row-md-6" id="about_us">
             <h3>ارتباط با ما</h3>
@@ -168,6 +172,7 @@ class Register extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
 
+    // fetch some imaginary address and send username and password to DB
     fetch('/api/post/get_user', {
       method: 'POST',
       body: data
