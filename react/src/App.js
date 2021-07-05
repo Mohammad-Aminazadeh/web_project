@@ -3,24 +3,17 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./style.css";
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
-      tehran_data: [],
-      isfahan_data: [],
-      shiraz_data: [],
-      mashhad_data: [], 
-      tabriz_data: [],
-      ardebil_data: [],
-      gilan_data: [],
-      mazandaran_data: [],
-      bandarabbas_data: [],
-      kerman_data: [],
-      semnan_data: []
-    }
+      register_form: "",
+    };
   }
+
+  register_handler = () => {
+    this.state.register_form = <h1>register form</h1>;
+  };
 
   render() {
     return (
@@ -34,34 +27,41 @@ class App extends React.Component {
                 </a>
               </div>
               <div className="col-4 d-flex justify-content-end align-items-center">
-                <a className="link-secondary" href="#" aria-label="Search">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="mx-3"
-                    role="img"
-                    viewBox="0 0 24 24"
-                  >
-                    <title>Search</title>
-                    <circle cx="10.5" cy="10.5" r="7.5" />
-                    <path d="M21 21l-5.2-5.2" />
-                  </svg>
-                </a>
-                <a className="btn btn-sm btn-outline-secondary" href="#">
-                  ثبت نام
-                </a>
+                <a className="link-secondary" href="#" aria-label="Search"></a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  className="mx-3"
+                  role="img"
+                  viewBox="0 0 24 24"
+                >
+                  <title>Search</title>
+                  <circle cx="10.5" cy="10.5" r="7.5" />
+                  <path d="M21 21l-5.2-5.2" />
+                </svg>
               </div>
             </div>
           </header>
 
+          {this.state.register_form}
+
           <div className="nav-scroller py-1 mb-2">
             <Router>
+              <Link to='/register' className=''>
+                <button
+                  className="btn btn-sm btn-outline-secondary "
+                  // onClick={this.register_handler}
+                >
+                  ثبت نام
+                </button>
+              </Link>
+
               <nav className="nav d-flex justify-content-between">
                 <Link to="/about" className="p-2 link-secondary">
                   درباره سایت
@@ -104,6 +104,7 @@ class App extends React.Component {
                 </Link>
               </nav>
               <Switch>
+                <Route path="/register" component={Register}></Route>
                 <Route path="/about" component={About}></Route>
                 <Route path="/tehran" component={Tehran}></Route>
                 <Route path="/isfahan" component={Isfahan}></Route>
@@ -158,6 +159,22 @@ class App extends React.Component {
       </div>
     );
   }
+}
+
+function Register() {
+  return (
+    <form className='float-right'>
+      <label className='btn btn-primary d-flex justify-content-end align-items-center'>ایمیل خود را وارد کنید</label><br></br>
+      <input type='text' name='email'></input>
+      <br></br>
+      <br></br>
+      <label className='btn btn-secondary d-flex justify-content-end align-items-center'>پسورد خود را وارد کنید</label><br></br>
+      <input type='password' name='email'></input>
+      <br></br>
+      <br></br>
+      <input type='submit' className='btn btn-success'></input>
+    </form>
+  );
 }
 
 function About() {

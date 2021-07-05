@@ -92,13 +92,17 @@ class App extends React.Component {
                     <path d="M21 21l-5.2-5.2" />
                   </svg>
                 </a>
-                <a className="btn btn-sm btn-outline-secondary" href="#">
+                <a
+                  className="btn btn-sm btn-outline-secondary"
+                  href="./register.php"
+                >
                   ثبت نام
                 </a>
               </div>
             </div>
           </header>
 
+          {/* the main router of the page which leads to different cities */}
           <div className="nav-scroller py-1 mb-2">
             <Router>
               <nav className="nav d-flex justify-content-between">
@@ -142,6 +146,7 @@ class App extends React.Component {
                   سمنان
                 </Link>
               </nav>
+
               <Switch>
                 <Route path="/about" component={About}></Route>
                 <Route path="/tehran" component={Tehran}></Route>
