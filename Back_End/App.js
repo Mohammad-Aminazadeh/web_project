@@ -29,8 +29,37 @@ class App extends React.Component {
     fetch('http://localhost/Back_End/api/post/read.php')
     .then(response => response.json())
     .then((data) => {
-      
+      this.setState({cities_data: data});
     })
+
+    // seperating each city data into it's own array
+    for(let i = 0; i < this.state.cities_data.length; i++) {
+      if(this.state.cities_data[i]["city_name"] == 'تهران') {
+        this.setState({tehran_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'اصفهان') {
+        this.setState({isfahan_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'شیراز') {
+        this.setState({shiraz_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'مشهد') {
+        this.setState({mashhad_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'تبریز') {
+        this.setState({tabriz_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'یزد') {
+        this.setState({yazd_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'اردبیل') {
+        this.setState({ardebil_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'گیلان') {
+        this.setState({gilan_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'مازندران') {
+        this.setState({mazandaran_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'بندرعباس') {
+        this.setState({bandarabbas_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'کرمان') {
+        this.setState({kerman_data: this.state.cities_data[i]});
+      } else if(this.state.cities_data[i]["city_name"] == 'سمنان') {
+        this.setState({semnan_data: this.state.cities_data[i]});
+      }
+    }
   }
 
   render() {
