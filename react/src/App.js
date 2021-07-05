@@ -2,144 +2,162 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./style.css";
 
-// const image_style = {
-//   align: {
-//     justifyContent: 'center',
-//     alignItems: 'center'
-//   }
-// };
-function App() {
-  return (
-    <div className="App">
-      <div className="container">
-        <header className="blog-header py-3">
-          <div className="row flex-nowrap justify-content-between align-items-center">
-            <div className="col-4 pt-1">
-              <a className="link-secondary" href="#">
-                اشتراک
-              </a>
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tehran_data: [],
+      isfahan_data: [],
+      shiraz_data: [],
+      mashhad_data: [], 
+      tabriz_data: [],
+      ardebil_data: [],
+      gilan_data: [],
+      mazandaran_data: [],
+      bandarabbas_data: [],
+      kerman_data: [],
+      semnan_data: []
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="container">
+          <header className="blog-header py-3">
+            <div className="row flex-nowrap justify-content-between align-items-center">
+              <div className="col-4 pt-1">
+                <a className="link-secondary" href="#">
+                  اشتراک
+                </a>
+              </div>
+              <div className="col-4 d-flex justify-content-end align-items-center">
+                <a className="link-secondary" href="#" aria-label="Search">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="mx-3"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <title>Search</title>
+                    <circle cx="10.5" cy="10.5" r="7.5" />
+                    <path d="M21 21l-5.2-5.2" />
+                  </svg>
+                </a>
+                <a className="btn btn-sm btn-outline-secondary" href="#">
+                  ثبت نام
+                </a>
+              </div>
             </div>
-            <div className="col-4 d-flex justify-content-end align-items-center">
-              <a className="link-secondary" href="#" aria-label="Search">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="mx-3"
-                  role="img"
-                  viewBox="0 0 24 24"
-                >
-                  <title>Search</title>
-                  <circle cx="10.5" cy="10.5" r="7.5" />
-                  <path d="M21 21l-5.2-5.2" />
-                </svg>
-              </a>
-              <a className="btn btn-sm btn-outline-secondary" href="#">
-                ثبت نام
-              </a>
+          </header>
+
+          <div className="nav-scroller py-1 mb-2">
+            <Router>
+              <nav className="nav d-flex justify-content-between">
+                <Link to="/about" className="p-2 link-secondary">
+                  درباره سایت
+                </Link>
+                <Link to="/tehran" className="p-2 link-secondary">
+                  تهران
+                </Link>
+                <Link to="/isfahan" className="p-2 link-secondary">
+                  اصفهان
+                </Link>
+                <Link to="/shiraz" className="p-2 link-secondary">
+                  شیراز
+                </Link>
+                <Link to="/mashhad" className="p-2 link-secondary">
+                  مشهد
+                </Link>
+                <Link to="/tabriz" className="p-2 link-secondary">
+                  تبریز
+                </Link>
+                <Link to="/yazd" className="p-2 link-secondary">
+                  یزد
+                </Link>
+                <Link to="/ardebil" className="p-2 link-secondary">
+                  اردبیل
+                </Link>
+                <Link to="/gilan" className="p-2 link-secondary">
+                  گیلان
+                </Link>
+                <Link to="/mazandaran" className="p-2 link-secondary">
+                  مازندران
+                </Link>
+                <Link to="/bandarabbas" className="p-2 link-secondary">
+                  بندرعباس
+                </Link>
+                <Link to="/kerman" className="p-2 link-secondary">
+                  کرمان
+                </Link>
+                <Link to="/semnan" className="p-2 link-secondary">
+                  سمنان
+                </Link>
+              </nav>
+              <Switch>
+                <Route path="/about" component={About}></Route>
+                <Route path="/tehran" component={Tehran}></Route>
+                <Route path="/isfahan" component={Isfahan}></Route>
+                <Route path="/shiraz" component={Shiraz}></Route>
+                <Route path="/mashhad" component={Mashhad}></Route>
+                <Route path="/tabriz" component={Tabriz}></Route>
+                <Route path="/yazd" component={Yazd}></Route>
+                <Route path="/ardebil" component={Ardebil}></Route>
+                <Route path="/gilan" component={Gilan}></Route>
+                <Route path="/mazandaran" component={Mazandaran}></Route>
+                <Route path="/bandarabbas" component={Bandarabbas}></Route>
+                <Route path="/kerman" component={Kerman}></Route>
+                <Route path="/semnan" component={Semnan}></Route>
+              </Switch>
+            </Router>
+          </div>
+        </div>
+
+        <main className="container">
+          <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div className="col-md-12 px-0">
+              <img
+                src="https://iranstourism.com/wp-content/uploads/2019/06/Iran-tourism-1-870x438.png"
+                alt="n/a"
+                id="around_the_world_img"
+                style={{ alignContent: "center" }}
+              ></img>
+              <h1
+                className="display-4 fst-italic"
+                style={{ textAlign: "right" }}
+              >
+                با ما، به هرکجای ایران که می‌خواهید سفر کنید
+              </h1>
+              <p className="lead my-3" style={{ textAlign: "right" }}>
+                اطلاعات مفید برای گردشگری در ایران را از طریق ما بدست آورید و در
+                سفرتان از ما استفاده کنید{" "}
+              </p>
             </div>
           </div>
-        </header>
+        </main>
 
-        <div className="nav-scroller py-1 mb-2">
-          <Router>
-            <nav className="nav d-flex justify-content-between">
-              <Link to="/about" className="p-2 link-secondary">
-                درباره سایت
-              </Link>
-              <Link to="/tehran" className="p-2 link-secondary">
-                تهران
-              </Link>
-              <Link to="/isfahan" className="p-2 link-secondary">
-                اصفهان
-              </Link>
-              <Link to="/shiraz" className="p-2 link-secondary">
-                شیراز
-              </Link>
-              <Link to="/mashhad" className="p-2 link-secondary">
-                مشهد
-              </Link>
-              <Link to="/tabriz" className="p-2 link-secondary">
-                تبریز
-              </Link>
-              <Link to="/yazd" className="p-2 link-secondary">
-                یزد
-              </Link>
-              <Link to="/ardebil" className="p-2 link-secondary">
-                اردبیل
-              </Link>
-              <Link to="/gilan" className="p-2 link-secondary">
-                گیلان
-              </Link>
-              <Link to="/mazandaran" className="p-2 link-secondary">
-                مازندران
-              </Link>
-              <Link to="/bandarabbas" className="p-2 link-secondary">
-                بندرعباس
-              </Link>
-              <Link to="/kerman" className="p-2 link-secondary">
-                کرمان
-              </Link>
-              <Link to="/semnan" className="p-2 link-secondary">
-                سمنان
-              </Link>
-            </nav>
-            <Switch>
-              <Route path="/about" component={About}></Route>
-              <Route path="/tehran" component={Tehran}></Route>
-              <Route path="/isfahan" component={Isfahan}></Route>
-              <Route path="/shiraz" component={Shiraz}></Route>
-              <Route path="/mashhad" component={Mashhad}></Route>
-              <Route path="/tabriz" component={Tabriz}></Route>
-              <Route path="/yazd" component={Yazd}></Route>
-              <Route path="/ardebil" component={Ardebil}></Route>
-              <Route path="/gilan" component={Gilan}></Route>
-              <Route path="/mazandaran" component={Mazandaran}></Route>
-              <Route path="/bandarabbas" component={Bandarabbas}></Route>
-              <Route path="/kerman" component={Kerman}></Route>
-              <Route path="/semnan" component={Semnan}></Route>
-            </Switch>
-          </Router>
-        </div>
-      </div>
-
-      <main className="container">
-        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-          <div className="col-md-12 px-0">
-            <img
-              src="https://iranstourism.com/wp-content/uploads/2019/06/Iran-tourism-1-870x438.png"
-              alt="n/a"
-              id="around_the_world_img"
-              style={{ alignContent: "center" }}
-            ></img>
-            <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
-              با ما، به هرکجای ایران که می‌خواهید سفر کنید
-            </h1>
-            <p className="lead my-3" style={{ textAlign: "right" }}>
-              اطلاعات مفید برای گردشگری در ایران را از طریق ما بدست آورید و در
-              سفرتان از ما استفاده کنید{" "}
+        <footer className="blog-footer">
+          <div className="row-md-6" id="about_us">
+            <h3>ارتباط با ما</h3>
+            <p>
+              شما کاربر گرامی میتوانید با ما از طریق شماره همراه 09390125715 در
+              ارتباط باشید و سوالات مرتبط با گردشگری را از شما بپرسید تا ما شما
+              را راهنمایی کنیم.{" "}
             </p>
           </div>
-        </div>
-      </main>
-
-      <footer className="blog-footer">
-        <div className="row-md-6" id="about_us">
-          <h3>ارتباط با ما</h3>
-          <p>
-            شما کاربر گرامی میتوانید با ما از طریق شماره همراه 09390125715 در
-            ارتباط باشید و سوالات مرتبط با گردشگری را از شما بپرسید تا ما شما را
-            راهنمایی کنیم.{" "}
-          </p>
-        </div>
-      </footer>
-    </div>
-  );
+        </footer>
+      </div>
+    );
+  }
 }
 
 function About() {
