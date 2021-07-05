@@ -1,28 +1,36 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import "style.css";
+import "./style.css";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-  constructor() {
+    // all cities data
     this.state = {
-      tehran_data: '',
-      isfahan_data: '',
-      shiraz_data: '',
-      mashhad_data: '',
-      tabriz_data: '',
-      yazd_data: '',
-      ardebil_data: '',
-      gilan_data: '',
-      mazandaran_data: '',
-      bandarabbas_data: '',
-      kerman_data: '',
-      semnan_data:''
-    }
+      cities_data: [],
+      tehran_data: [],
+      isfahan_data: [],
+      shiraz_data: [],
+      mashhad_data: [],
+      tabriz_data: [],
+      ardebil_data: [],
+      gilan_data: [],
+      mazandaran_data: [],
+      bandarabbas_data: [],
+      kerman_data: [],
+      semnan_data: [],
+    };
   }
 
   componentDidMount() {
-    fetch('')
+
+    // fetch the city data from database
+    fetch('http://localhost/Back_End/api/post/read.php')
+    .then(response => response.json())
+    .then((data) => {
+      
+    })
   }
 
   render() {
@@ -66,8 +74,8 @@ class App extends React.Component {
           <div className="nav-scroller py-1 mb-2">
             <Router>
               <nav className="nav d-flex justify-content-between">
-                <Link to="/home" className="p-2 link-secondary">
-                  خانه
+                <Link to="/about" className="p-2 link-secondary">
+                  درباره سایت
                 </Link>
                 <Link to="/tehran" className="p-2 link-secondary">
                   تهران
@@ -106,9 +114,8 @@ class App extends React.Component {
                   سمنان
                 </Link>
               </nav>
-
               <Switch>
-                <Route path="/home" component={Home}></Route>
+                <Route path="/about" component={About}></Route>
                 <Route path="/tehran" component={Tehran}></Route>
                 <Route path="/isfahan" component={Isfahan}></Route>
                 <Route path="/shiraz" component={Shiraz}></Route>
@@ -126,27 +133,36 @@ class App extends React.Component {
           </div>
         </div>
 
+        <main className="container">
+          <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div className="col-md-12 px-0">
+              <img
+                src="https://iranstourism.com/wp-content/uploads/2019/06/Iran-tourism-1-870x438.png"
+                alt="n/a"
+                id="around_the_world_img"
+                style={{ alignContent: "center" }}
+              ></img>
+              <h1
+                className="display-4 fst-italic"
+                style={{ textAlign: "right" }}
+              >
+                با ما، به هرکجای ایران که می‌خواهید سفر کنید
+              </h1>
+              <p className="lead my-3" style={{ textAlign: "right" }}>
+                اطلاعات مفید برای گردشگری در ایران را از طریق ما بدست آورید و در
+                سفرتان از ما استفاده کنید{" "}
+              </p>
+            </div>
+          </div>
+        </main>
+
         <footer className="blog-footer">
           <div className="row-md-6" id="about_us">
-            <h3>درباره‌ی ما</h3>
+            <h3>ارتباط با ما</h3>
             <p>
-              سایت گردشگری تریپ یار با داشتن هدف دگرگونی و متحول ساختن گردشگری
-              ایران در فضای آنلاین گردشگری خواستار ایجاد رقابت سالم در میان سایت
-              های رزرواسیون هتل و سایت های معرفی جاذبه های گردشگری ایران می باشد
-              تا در آینده نچندان دور گردشگری ایران را متحول ببینیم. سایت گردشگری
-              تریپ یار با دارا بودن امکانات ویژه که برای اولین بار در یک سایت
-              گردشگری در ایران از این امکانات رونمایی شده پا در دنیای گردشگری
-              گذاشته است که برای نمونه می توان به اولین و بزرگترین سیستم آنلاین
-              مقایسه قیمت و رزر هتل و هتل آپارتمان ها٬ میانگین امتیاز دهی هتل ها
-              از سایت های رزرواسیون هتل٬ معرفی جاذبه های گردشگری به بهترین نوع
-              با زمان و نرخ بازدیدهای اماکن گردشگری برای اولین بار در ایران٬ به
-              روزترین اخبار گردشگری ایران از سایت های گردشگری٬ تقویم و برنامه
-              ریزی گردشگری به بهترین٬ راحت ترین و سریع ترین نوع که از ویژگی های
-              بارز و مهم سایت گردشگری تریپ یار می باشد٬ که برای اولین بار در یک
-              سایت گردشگری در ایران و شاید حتی در دنیا از آن پرده برداری شدو ده
-              ها ویژگی ها منحصر بفردی که در آینده برای راحت تر٬ بی دغدغه و ارزان
-              تر سفر کردن شاهد آن خواهید بود. ما برای تغییر و دگرگونی گردشگری
-              ایران آمدیم. تریپ یار٬ یار سفر
+              شما کاربر گرامی میتوانید با ما از طریق شماره همراه 09390125715 در
+              ارتباط باشید و سوالات مرتبط با گردشگری را از شما بپرسید تا ما شما
+              را راهنمایی کنیم.{" "}
             </p>
           </div>
         </footer>
@@ -155,172 +171,27 @@ class App extends React.Component {
   }
 }
 
-function Home() {
+function About() {
   return (
-    <div className="Home">
-      <main className="container">
-        <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-          <div className="col-md-6 px-0">
-            <img
-              src="https://i.pinimg.com/originals/ba/de/3f/bade3f5134bd8c16fae9cb800023ab23.jpg"
-              alt="n/a"
-              id="around_the_world_img"
-            ></img>
-            <h1 className="display-4 fst-italic" style={{ textAlign: "right" }}>
-              با ما، به هرکجای دنیا که می‌خواهید سفر کنید
-            </h1>
-            <p className="lead my-3" style={{ textAlign: "right" }}>
-              این یک تکست بی معنی است که تکرار شده است این یک تکست بی معنی است
-              که تکرار شده است این یک تکست بی معنی است که تکرار شده است این یک
-              تکست بی معنی است که تکرار شده است این یک تکست بی معنی است که تکرار
-              شده است{" "}
-            </p>
-            <p className="lead mb-0">
-              <a href="Continue reading.html" className="text-white fw-bold">
-                ...در ادامه بخوانید
-              </a>
-            </p>
-          </div>
-        </div>
-      </main>
-
+    <div className="About">
       <div className="row">
         <div className="col-md-12">
           <article className="blog-post">
-            <h2 className="blog-post-title">جاذبه های گردشگری در ایران</h2>
+            <h2 className="blog-post-title">درباره سایت</h2>
             <p className="blog-post-meta">نوشته شده در تاریخ 30 بهمن 99</p>
 
+            {/* ahout us description */}
             <p>
-              ایران با تاریخی کهن، مردمی خونگرم و مهمان‌نواز، طبیعتی کم‌نظیر و
-              فرهنگی رنگارنگ همواره مورد کم‌لطفی رسانه‌های خارجی قرار گرفته است.
-              این پیام نادرست از رسانه‌های خارجی در کنار بی‌توجهی خودمان به این
-              مرز و بوم تنها یک نتیجه در برداشته است و آن هم این است که نه مردم
-              ایران و نه مردم دنیا، آن طور که شایسته است ایران را نمی‌شناسند و
-              ندیده‌اند.
-            </p>
-            <hr></hr>
-            <p>
-              این موضوع ما را بر آن داشت که پایگاهی بسازیم بر بستر بی‌انتهای
-              اینترنت که تصویر زیبای ایران را برای ایرانیان بهتر نقش کند و کجارو
-              از مرداد ۹۴ کار خود را آغاز کرد. مردمی که سرزمین خود را بشناسند،
-              شوق و دانش بیشتری برای معرفی آن به جامعه جهانی خواهند داشت و این
-              کار بدون مشارکت تک‌تک ما به سرانجام نمی‌رسد.
-            </p>
-            <blockquote>
-              <p>
-                معمولا گردشگران به دلیل علاقه مندی به فرهنگ، طبیعت، یا آب و هوای
-                مقصد مورد نظر یا وجود جاذبه های گردشگری تاریخی، آن محل را به
-                عنوان مقصد سفر خود انتخاب می کنند. هر چند که جای جای کشور ایران
-                می تواند به عنوان بهترین مقاصد گردشگری برای مسافران به شمار آید.
-                اما در این میان برخی از استان های ایران توانسته اند، بیشترین
-                میزان جذب گردشگر خارجی را به خود اختصاص دهند. این استان ها
-                عبارتند از: خراسان رضوی، اصفهان، فارس، همدان، کرمانشاه، ایلام،
-                آذربایجان غربی، اردبیل، آذربایجان شرقی، تهران، خوزستان، گیلان و
-                همچنین سیستان و بلوچستان. لازم است بدانید استان ایلام محل ورود
-                گردشگران عراقی از مرز این استان است و در رده دوم قرار گرفته است.
-              </p>
-            </blockquote>
-            <p>
-              کارشناسان میزان تولید ناخالصی ملی را که از طریق گردشگری در ایران
-              به صورت غیر مستقیم به دست می آید، 6/1 درصد برآورد کرده اند. همچنین
-              صنعت گردشگری در ایران نیم درصد اشتغال را به خود اختصاص داده است.
-              اگر به این صنعت توجه بیشتری شود، صنعت گردشگری در ایران می تواند به
-              بحران اشتغال کشور کمک بسیار کند. به دلیل تنوع بالایی که در صنعت
-              گردشگری وجود دارد، این صنعت می تواند در اقتصاد کشور تاثیرات بسیار
-              زیادی داشته باشد. با توسعه صنعت گردشگری می توان به کاهش بیکاری و
-              توزیع درآمد و افزایش درآمد دولت کمک کرد.
-            </p>
-            <h2>جاذبه های گردشگری در ایران</h2>
-            <p>
-              ردشگری در ایران به عنوان مسافرت تفریحی به شمار می آید. اخیرا
-              گردشگری را به هر گونه مسافرتی می گویند که شخص برای خارج شدن از
-              محیط کار و زندگی خود انتخاب می کند. صنعت گردشگری در ایران دارای
-              ظرفیت بالایی برای رشد و توسعه می باشد. گردشگری در ایران توانسته
-              است رتبه دهم را در جاذبه های باستانی و تاریخی کسب کند. همچنین کشور
-              ایران دارای رتبه پنجم در جاذبه های طبیعی در جهان می باشد.
-            </p>
-            <h3>جاذبه های گردشگری در ایران</h3>
-            <p>
-              ایران به عنوان یکی از مناطق امن از لحاظ امنیت برای گردشگران خارجی
-              می باشد. طبق آماری که در سال 2008 به دست آمده است، میزان گردشگرانی
-              که در این سال به ایران سفر کرده اند، 2.000.000 گردشگر خارجی بوده
-              است در حالی که میزان گردشگرانی که در دنیا سفر کرده بودند، در این
-              سال 842.000.000 جهانگرد بوده است
-            </p>
-            <p>
-              از عوامل مهم در توسعه گردشگری در ایران آب های معدنی هستند که در
-              برخی نواحی وجود دارند. چشمه های آب معدنی ایران با پراکندگی در برخی
-              نواحی ایران سبب جذب گردشگران داخلی و خارجی شده اند. این چشمه ها در
-              شهرهای مشگین شهر، مراغه، سرعین، اوج و لاریجان هستند.
-            </p>
-            <h3>جاذبه های گردشگری در ایران</h3>
-            <p>
-              در ناحیه شمالی ایران تالاب انزلی دربندر انزلی بهشت گیلان و شهر
-              نیلوفرهای آبی، خط ساحلی خزر از فریدونکنار تا چالوس و ماسوله این
-              شهر خیال انگیز و مه اندود از مناطق گردشگری در ایران هستند. مناطق
-              کوهستانی که در ماسوله هستند، پارک جنگلی سی سنگان در شهرستان نوشهر
-              گردشگران زیادی را به خود جذب می کنند. در این مناطق جنگلی امکانات
-              مختلفی برای مسافران در نظر گرفته شده است. از دیگر جاذبه های دیدنی
-              شمال ایران می توان به پارک ملی گلستان اشاره کرد. این پارک در میان
-              گنبد کاووس این شهر زیبا در آغوش ترکمن صحرا و بجنورد قرار گرفته
-              است. پارک ملی گلستان دارای منطقه اختصاصی تفرجگاه است که سالانه
-              صدها هزار گردشگر به این منطقه وارد می شوند. از مناطق جنوبی ایران
-              می توان به هرمز جزیره ی رنگین خلیج فارس و کناره های خلیج فارس
-              اشاره کرد، این مناطق به دلیل آب و هوای گرم بهترین مکان برای اوقات
-              فراغت در تابستان هستند. از دیدنی های این منطقه می توان به جنگل های
-              حرا در سواحل بندرعباس اشاره کرد.
-            </p>
-            <p>
-              از نواحی گردشگری در ایران برای ورزش های زمستانی می توان ارتفاعات
-              البرز و زاگرس که پوشیده از برف هستند را نام برد. این نواحی با
-              داشتن چشم اندازهای بسیار زیبا و طبیعی، چشمه سارها، غارهای طبیعی و
-              آبشارها از مکان های پر بازدید در ایران هستند.
-            </p>
-            <p>
-              در فصل تابستان مسافران زیادی از اردبیل، مشگین شهر، دامنه های سبلان
-              و سهند و منطقه دماوند در البرز دیدن می کنند.در فصل گرما بهترین
-              انتخاب سفر به استان اردبیل است. شمشک، توچال، پیست اسکی دیزین و
-              آبعلی که در ارتفاعات البرز هستند، بهترین مناطق برای ورزش های
-              زمستانی در ایران هستند. ‌
-            </p>
-          </article>
-
-          <article className="blog-post">
-            <h2 className="blog-post-title">مناطق تاریخی و فرهنگی ایران</h2>
-            <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
-
-            <p>
-              استان فارس از قطب های بزرگ گردشگری فرهنگی و تاریخی ایران به شمار
-              می آید و دارای عنوان پایتخت فرهنگی ایران باستان شناخته شده است. در
-              این استان بناهای مختلف و آثار تاریخی قبل از تاریخ را می توان دید.
-              در این استان می توان سنگ نگاره های غارنشینان ده مورد را نام برد.
-              بناهای باستانی ابن استان عبارتند از پاسارگاد، تخت جمشید، تخت
-              سلیمان، نقش رستم، حمام و بازار وکیل، دروازه قرآن و آرامگاه سعدی و
-              حافظ. گردشگران زیادی سالانه برای بازدید از این مکان های تاریخی به
-              استان فارس سفر می کنند. شیراز یکی از شهر های بزرگ و قدیمی ایران
-              است. شیراز با عطر بهار نارنج یکی از بزرگترین جاذبه های گردشگری
-              ایران است.
-            </p>
-            <blockquote>
-              <p>
-                از دیگر مناطق تاریخی و فرهنگی ایران شهر اصفهان می باشد. اصفهان
-                با وجود میدان نقش جهان، سی و سه پل، پل خواجو، عمارت عالی قاپو،
-                کاخ چهل ستون و هنرهای مختلفی چون مینیاتور، کاشی کاری و حجاری به
-                عنوان پایتخت فرهنگی اسلامی ایران معرفی شده است.
-              </p>
-            </blockquote>
-            <p>
-              از دیگر قطب های گردشگری فرهنگی تاریخی ایران می توان استان کرمانشاه
-              را نام برد. مکان های دیدنی این استان طاق بستان، معبد آناهیتا،
-              کاروانسرای عباسی، تکیه معاون الملک، بزرگترین بازار سنتی خاورمیانه،
-              مسجد شافعی، مسجد و حمام حاج شهبازخان هستند.
-            </p>
-            <p>
-              در فصل تابستان مسافران زیادی از اردبیل، مشگین شهر، دامنه های سبلان
-              و سهند و منطقه دماوند در البرز دیدن می کنند.در فصل گرما بهترین
-              انتخاب سفر به استان اردبیل است. شمشک، توچال، پیست اسکی دیزین و
-              آبعلی که در ارتفاعات البرز هستند، بهترین مناطق برای ورزش های
-              زمستانی در ایران هستند. ‌
+              این سایت برای راهنمایی گردشگران طراحی شده است. کسانی که میخواهند
+              به مناطق مختلف ایران سفر کنند میتوانند با ورود به این سایت از
+              مطالب درباره گردشگری بهره مند شوند. کاربران میتوانند مطالب مرتبط
+              با گردشگری درباره هر استان ایران را ببینند و در سفر خود از این
+              مطالب استفاده کنند. در این سایت درباره هر استان مطالبی قرار داده
+              شده است که کاربران میتوانند با ورود به لینک مرتبط با هر استان، با
+              استان دلخواه خودشان آشنا شده و مناطق مختلف استانها برای گردشگری را
+              مطالعه کنند. همینطور برای هر استان پنج هتل برتر آن استان هم نوشته
+              شده است تا کاربران با هتلهای برتر هر استان آشنا شده و در سفر خود
+              به یکی از این هتلها بروند.{" "}
             </p>
           </article>
         </div>
@@ -332,76 +203,264 @@ function Home() {
 function Tehran() {
   return (
     <div className="Tehran">
-      {/* <h1 style={{ textAlign: "center" }}>تهران</h1>
+      <h1 style={{ textAlign: "center" }}>تهران</h1>
       <img
         src="https://wallpaperaccess.com/full/1291453.jpg"
         alt="تهران"
-        width={500}
+        width={1100}
         height={600}
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
         <h2 className="blog-post-title">درمورد تهران</h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
-        <p>
-          تهران یکی از مهم‌ترین مراکز گردشگری ایران به حساب می‌آید و دارای
-          مجموعه‌ای از جاذبه‌های گردشگری است که شامل کاخ‌ها و موزه‌هایش می‌شود.
-          میدان و برج آزادی، برج میلاد، پل طبیعت و کاخ گلستان از جاذبه های
-          گردشگری مهم شهر تهران هستند. تهران در سال ۲۰۰۹ میلادی، میزبان ۶۴۶ هزار
-          گردشگر خارجی بود و در سال ۲۰۱۲ به 1.11 میلیون نفر تغییر یافت. افزایش
-          پیوستهٔ ورود گردشگران خارجی به این شهر باعث شد آمار این گردشگران در
-          سال ۲۰۱۵ به 1.51 میلیون نفر برسد. عراقی ها بیشترین درصد مسافران خارجی
-          را بین سالهای 2012 تا 2016 در تهران تشکیل میدادند که این میزان در سال
-          2016 بیش از 450 هزار نفر بود. تهران با جذب 1.64 میلیون گزدشگر در سال
-          2016 یکی از مهمترین شهرهای خاورمیانه در زمینه گردشگری بوده است و پس از
-          شهرهای دبی، ژوهانسبورگ، ریاض و ابوظبی در رتبه پنجم از حیث ورود گردشگر
-          در خاورمیانه است.
-        </p>
-      </article> */}
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
     </div>
   );
 }
 
 function Isfahan() {
-  return <div className="Isfahan"></div>;
+  return (
+    <div className="Isfahan">
+      <h1 style={{ textAlign: "center" }}>اصفهان</h1>
+      <img
+        src="https://images.kojaro.com/2020/8/29c87dc1-bc25-4a8a-8c94-8529e7e26dcb.jpg"
+        alt="اصفهان"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد اصفهان</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Shiraz() {
-  return <div className="Shiraz"></div>;
+  return (
+    <div className="Shiraz">
+      <h1 style={{ textAlign: "center" }}>شیراز</h1>
+      <img
+        src="https://aminmana.com/wp-content/uploads/2019/04/shiraz.jpg"
+        alt="شیراز"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد شیراز</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 function Mashhad() {
-  return <div className="Mashhad"></div>;
+  return (
+    <div className="Mashhad">
+      <h1 style={{ textAlign: "center" }}>مشهد</h1>
+      <img
+        src="http://mashadmag.ir/wp-content/uploads/2019/01/Mashad-1.jpg"
+        alt="مشهد"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد مشهد</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Tabriz() {
-  return <div className="Tabriz"></div>;
+  return (
+    <div className="Tabriz">
+      <h1 style={{ textAlign: "center" }}>تبریز</h1>
+      <img
+        src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1394/06/03/13940603114647695955824.jpg"
+        alt="تبریز"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد تبریز</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Yazd() {
-  return <div className="Yazd"></div>;
+  return (
+    <div className="Yazd">
+      <h1 style={{ textAlign: "center" }}>یزد</h1>
+      <img
+        src="https://www.bultannews.com/files/fa/news_albums/654356/8251/resized/resized_1236704_194.jpg"
+        alt="یزد"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد یزد</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Ardebil() {
-  return <div className="Ardebil"></div>;
+  return (
+    <div className="Ardebil">
+      <h1 style={{ textAlign: "center" }}>اردبیل</h1>
+      <img
+        src="https://safarmarket.com/blog/data/uploaded_files/d762334fbcc5c0a8b561b504.jpg"
+        alt="اردبیل"
+        width={1100}
+        height={600}
+        style={{ justifyContent: "center" }}
+        textAlign="center"
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد اردبیل</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Gilan() {
-  return <div className="Gilan"></div>;
+  return (
+    <div className="Gilan">
+      <h1 style={{ textAlign: "center" }}>گیلان</h1>
+      <img
+        src="https://shahrak-arash.com/wp-content/uploads/2021/01/gilan-11.jpg"
+        alt="گیلان"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد گیلان</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Mazandaran() {
-  return <div className="Mazandaran"></div>;
+  return (
+    <div className="Mazandaran">
+      <h1 style={{ textAlign: "center" }}>مازندران</h1>
+      <img
+        src="https://www.finds.ir/img/2020042876011819.jpg"
+        alt="مازندران"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد مازندران</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Bandarabbas() {
-  return <div className="Bandarabbas"></div>;
+  return (
+    <div className="Bandarabbas">
+      <h1 style={{ textAlign: "center" }}>بندرعباس</h1>
+      <img
+        src="https://media.mehrnews.com/d/2017/12/24/3/2672251.jpg"
+        alt="بندرعباس"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد بندرعباس</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Kerman() {
-  return <div className="Kerman"></div>;
+  return (
+    <div className="Kerman">
+      <h1 style={{ textAlign: "center" }}>کرمان</h1>
+      <img
+        src="https://cdn.mehrbooking.net/general/Images/Cities/kerman-ganjalikhan-mosque.jpg"
+        alt="کرمان"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد کرمان</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 
 function Semnan() {
-  return <div className="Semnan"></div>;
+  return (
+    <div className="Semnan">
+      <h1 style={{ textAlign: "center" }}>سمنان</h1>
+      <img
+        src="https://www.alaedin.travel/Files/cities/semnan/Alaedin-Travel-Semnan-City-1.jpg"
+        alt="سمنان"
+        width={1100}
+        height={600}
+        style={{ textAlign: "center" }}
+      ></img>
+      <article className="blog-post">
+        <h2 className="blog-post-title">درمورد سمنان</h2>
+        <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
+
+        {/* the description of the city goes into this p tag */}
+        <p></p>
+      </article>
+    </div>
+  );
 }
 export default App;
