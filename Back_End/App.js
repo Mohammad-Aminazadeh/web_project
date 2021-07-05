@@ -24,40 +24,39 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
     // fetch the city data from database
-    fetch('http://localhost/Back_End/api/post/read.php')
-    .then(response => response.json())
-    .then((data) => {
-      this.setState({cities_data: data});
-    })
+    fetch("http://localhost/Back_End/api/post/read.php")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ cities_data: data });
+      });
 
     // seperating each city data into it's own array
-    for(let i = 0; i < this.state.cities_data.length; i++) {
-      if(this.state.cities_data[i]["city_name"] == 'تهران') {
-        this.setState({tehran_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'اصفهان') {
-        this.setState({isfahan_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'شیراز') {
-        this.setState({shiraz_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'مشهد') {
-        this.setState({mashhad_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'تبریز') {
-        this.setState({tabriz_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'یزد') {
-        this.setState({yazd_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'اردبیل') {
-        this.setState({ardebil_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'گیلان') {
-        this.setState({gilan_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'مازندران') {
-        this.setState({mazandaran_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'بندرعباس') {
-        this.setState({bandarabbas_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'کرمان') {
-        this.setState({kerman_data: this.state.cities_data[i]});
-      } else if(this.state.cities_data[i]["city_name"] == 'سمنان') {
-        this.setState({semnan_data: this.state.cities_data[i]});
+    for (let i = 0; i < this.state.cities_data.length; i++) {
+      if (this.state.cities_data[i]["city_name"] == "تهران") {
+        this.setState({ tehran_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "اصفهان") {
+        this.setState({ isfahan_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "شیراز") {
+        this.setState({ shiraz_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "مشهد") {
+        this.setState({ mashhad_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "تبریز") {
+        this.setState({ tabriz_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "یزد") {
+        this.setState({ yazd_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "اردبیل") {
+        this.setState({ ardebil_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "گیلان") {
+        this.setState({ gilan_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "مازندران") {
+        this.setState({ mazandaran_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "بندرعباس") {
+        this.setState({ bandarabbas_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "کرمان") {
+        this.setState({ kerman_data: this.state.cities_data[i] });
+      } else if (this.state.cities_data[i]["city_name"] == "سمنان") {
+        this.setState({ semnan_data: this.state.cities_data[i] });
       }
     }
   }
@@ -229,10 +228,20 @@ function About() {
   );
 }
 
+// function Switch_handler() {
+//   return (
+
+//   );
+// }
+
 function Tehran() {
   return (
     <div className="Tehran">
-      <h1 style={{ textAlign: "center" }}>تهران</h1>
+      
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.tehran_data["city_name"]}
+      </h1>
       <img
         src="https://wallpaperaccess.com/full/1291453.jpg"
         alt="تهران"
@@ -241,7 +250,9 @@ function Tehran() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد تهران</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.tehran_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -254,7 +265,11 @@ function Tehran() {
 function Isfahan() {
   return (
     <div className="Isfahan">
-      <h1 style={{ textAlign: "center" }}>اصفهان</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.isfahan_data["city_name"]}
+      </h1>
       <img
         src="https://images.kojaro.com/2020/8/29c87dc1-bc25-4a8a-8c94-8529e7e26dcb.jpg"
         alt="اصفهان"
@@ -263,7 +278,9 @@ function Isfahan() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد اصفهان</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.isfahan_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -276,7 +293,11 @@ function Isfahan() {
 function Shiraz() {
   return (
     <div className="Shiraz">
-      <h1 style={{ textAlign: "center" }}>شیراز</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.shiraz_data["city_name"]}
+      </h1>
       <img
         src="https://aminmana.com/wp-content/uploads/2019/04/shiraz.jpg"
         alt="شیراز"
@@ -285,7 +306,9 @@ function Shiraz() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد شیراز</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.shiraz_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -297,7 +320,11 @@ function Shiraz() {
 function Mashhad() {
   return (
     <div className="Mashhad">
-      <h1 style={{ textAlign: "center" }}>مشهد</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.mashhad_data["city_name"]}
+      </h1>
       <img
         src="http://mashadmag.ir/wp-content/uploads/2019/01/Mashad-1.jpg"
         alt="مشهد"
@@ -306,7 +333,9 @@ function Mashhad() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد مشهد</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.mashhad_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -319,7 +348,11 @@ function Mashhad() {
 function Tabriz() {
   return (
     <div className="Tabriz">
-      <h1 style={{ textAlign: "center" }}>تبریز</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.tabriz_data["city_name"]}
+      </h1>
       <img
         src="https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1394/06/03/13940603114647695955824.jpg"
         alt="تبریز"
@@ -328,7 +361,9 @@ function Tabriz() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد تبریز</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.tabriz_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -341,7 +376,11 @@ function Tabriz() {
 function Yazd() {
   return (
     <div className="Yazd">
-      <h1 style={{ textAlign: "center" }}>یزد</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.yazd_data["city_name"]}
+      </h1>
       <img
         src="https://www.bultannews.com/files/fa/news_albums/654356/8251/resized/resized_1236704_194.jpg"
         alt="یزد"
@@ -350,7 +389,9 @@ function Yazd() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد یزد</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.yazd_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -363,7 +404,11 @@ function Yazd() {
 function Ardebil() {
   return (
     <div className="Ardebil">
-      <h1 style={{ textAlign: "center" }}>اردبیل</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.ardebil_data["city_name"]}
+      </h1>
       <img
         src="https://safarmarket.com/blog/data/uploaded_files/d762334fbcc5c0a8b561b504.jpg"
         alt="اردبیل"
@@ -373,7 +418,9 @@ function Ardebil() {
         textAlign="center"
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد اردبیل</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.ardebil_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -386,7 +433,11 @@ function Ardebil() {
 function Gilan() {
   return (
     <div className="Gilan">
-      <h1 style={{ textAlign: "center" }}>گیلان</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.gilan_data["city_name"]}
+      </h1>
       <img
         src="https://shahrak-arash.com/wp-content/uploads/2021/01/gilan-11.jpg"
         alt="گیلان"
@@ -395,7 +446,9 @@ function Gilan() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد گیلان</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.gilan_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -408,7 +461,11 @@ function Gilan() {
 function Mazandaran() {
   return (
     <div className="Mazandaran">
-      <h1 style={{ textAlign: "center" }}>مازندران</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.mazandaran_data["city_name"]}
+      </h1>
       <img
         src="https://www.finds.ir/img/2020042876011819.jpg"
         alt="مازندران"
@@ -417,7 +474,9 @@ function Mazandaran() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد مازندران</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.mazandaran_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -430,7 +489,11 @@ function Mazandaran() {
 function Bandarabbas() {
   return (
     <div className="Bandarabbas">
-      <h1 style={{ textAlign: "center" }}>بندرعباس</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.bandarabbas_data["city_name"]}
+      </h1>
       <img
         src="https://media.mehrnews.com/d/2017/12/24/3/2672251.jpg"
         alt="بندرعباس"
@@ -439,7 +502,9 @@ function Bandarabbas() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد بندرعباس</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.bandarabbas_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -452,7 +517,11 @@ function Bandarabbas() {
 function Kerman() {
   return (
     <div className="Kerman">
-      <h1 style={{ textAlign: "center" }}>کرمان</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.kerman_data["city_name"]}
+      </h1>
       <img
         src="https://cdn.mehrbooking.net/general/Images/Cities/kerman-ganjalikhan-mosque.jpg"
         alt="کرمان"
@@ -461,7 +530,9 @@ function Kerman() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد کرمان</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.kerman_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
@@ -474,7 +545,11 @@ function Kerman() {
 function Semnan() {
   return (
     <div className="Semnan">
-      <h1 style={{ textAlign: "center" }}>سمنان</h1>
+
+      {/* getiing city name and city description from state */}
+      <h1 style={{ textAlign: "center" }}>
+        {this.state.semnan_data["city_name"]}
+      </h1>
       <img
         src="https://www.alaedin.travel/Files/cities/semnan/Alaedin-Travel-Semnan-City-1.jpg"
         alt="سمنان"
@@ -483,7 +558,9 @@ function Semnan() {
         style={{ textAlign: "center" }}
       ></img>
       <article className="blog-post">
-        <h2 className="blog-post-title">درمورد سمنان</h2>
+        <h2 className="blog-post-title">
+          درمورد {this.state.semnan_data["city_name"]}
+        </h2>
         <p className="blog-post-meta">نوشته شده در 24 دی 99</p>
 
         {/* the description of the city goes into this p tag */}
